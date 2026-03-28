@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reptiles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f3e5f5, #e1bee7);
+      text-align: center;
+      margin: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+  
+    h2 {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 15px;
+      margin: 0;
+      letter-spacing: 2px;
+      animation: slideDown 1s ease-in-out;
+    }
+
+   
+    .animals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card h3 {
+      color: #6a1b9a;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover h3 {
+      color: #4a148c;
+    }
+
+    .table {
+      margin: 50px auto;
+      width: 60%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in;
+    }
+
+    th {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    td, th {
+      border: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f3e5f5;
+      transform: scale(1.02);
+      transition: 0.3s ease;
+    }
+
+    .back {
+      margin: 30px;
+    }
+
+    .back a {
+      text-decoration: none;
+      background-color: #6a1b9a;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .back a:hover {
+      background-color: #4a148c;
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+
+    @media (min-width: 993px) {
+
+      .animals {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .table {
+        width: 60%;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h2>Reptiles</h2>
+
+<div class="animals">
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.Y2aGjCLVBV4N6GcZ-Vd2HgHaE1?pid=Api&P=0&h=180">
+    <h3>Snake</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.hLx---VMoYuDErZolLpUIQHaE7?pid=Api&P=0&h=180">
+    <h3>Crocodile</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.7wGMbNfnt3MjEl5p5LLFoQHaHa?pid=Api&P=0&h=180">
+    <h3>Lizard</h3>
+  </div>
+
+</div>
+
+<div class="table">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Life-Span (Years)</th>
+    </tr>
+    <tr>
+      <td>Snake</td>
+      <td>9-20</td>
+    </tr>
+    <tr>
+      <td>Crocodile</td>
+      <td>70-100</td>
+    </tr>
+    <tr>
+      <td>Lizard</td>
+      <td>5-20</td>
+    </tr>
+  </table>
+</div>
+
+<div class="back">
+  <a href="project.html">Back to Home</a>
+</div>
+
+</body>
+</html>

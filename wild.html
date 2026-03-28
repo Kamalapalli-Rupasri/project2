@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wild Animals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #c8e6c9);
+      text-align: center;
+      margin: 0;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      background-color: #2e8b57;
+      color: white;
+      padding: 18px;
+      margin: 0;
+      letter-spacing: 2px;
+      animation: slideDown 1s ease-in-out;
+    }
+    .animals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card h3 {
+      color: #2e8b57;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover h3 {
+      color: #1e5f3a;
+    }
+
+   
+    .table {
+      margin: 50px auto;
+      width: 60%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in;
+    }
+
+    th {
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    td, th {
+      border: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #e8f5e9;
+      transform: scale(1.02);
+      transition: 0.3s ease;
+    }
+    .back {
+      margin: 30px;
+    }
+
+    .back a {
+      text-decoration: none;
+      background-color: #2e8b57;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .back a:hover {
+      background-color: #1e5f3a;
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    
+    @media (min-width: 1200px) {
+
+      body {
+        font-size: 20px;
+      }
+
+      .animals {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+        padding: 50px;
+      }
+
+      .card img {
+        height: 220px;
+      }
+
+      .table {
+        width: 50%;
+      }
+
+      table {
+        font-size: 20px;
+      }
+
+      .back a {
+        padding: 15px 30px;
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h2>Wild Animals</h2>
+
+<div class="animals">
+
+  <div class="card">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.JoxaiKhpKnS1WPB6l-GOEQHaEK?pid=Api&P=0&h=180">
+    <h3>Lion</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.FGjqa2ZIiRvfmuF1-wX0IwHaEo?pid=Api&P=0&h=180">
+    <h3>Tiger</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.JItfGXxlznJRry5rQFEs5wHaFI?pid=Api&P=0&h=180">
+    <h3>Elephant</h3>
+  </div>
+
+  <div class="card">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.54SGScE7_Au6k-XEZiHzSAHaFr?pid=Api&P=0&h=180">
+    <h3>Bear</h3>
+  </div>
+
+</div>
+
+<div class="table">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Life-Span (Years)</th>
+    </tr>
+    <tr>
+      <td>Lion</td>
+      <td>10-14</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>10-15</td>
+    </tr>
+    <tr>
+      <td>Elephant</td>
+      <td>60-70</td>
+    </tr>
+    <tr>
+      <td>Bear</td>
+      <td>15-25</td>
+    </tr>
+  </table>
+</div>
+
+<div class="back">
+  <a href="project.html">Back to Home</a>
+</div>
+
+</body>
+</html>

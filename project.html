@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Zoo</title>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #f4f7f6, #e0f2f1);
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+header {
+  background: #2e8b57;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  animation: slideDown 1s ease-in-out;
+}
+header h1 {
+  margin: 0;
+}
+nav {
+  background: #246b45;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+nav a:hover {
+  color: #c8e6c9;
+}
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.animals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  text-align: center;
+  text-decoration: none;
+  color: #2e8b57;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+}
+#contact p {
+  margin: 8px 0;
+}
+form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+input:focus, textarea:focus {
+  border-color: #2e8b57;
+  outline: none;
+  box-shadow: 0 0 5px rgba(46,139,87,0.4);
+}
+input[type="submit"] {
+  background: #2e8b57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+input[type="submit"]:hover {
+  background: #1e5f3a;
+  transform: scale(1.05);
+}
+footer {
+  background: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (min-width: 1200px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .animals {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section {
+    padding: 60px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Welcome to Happy Zoo</h1>
+  <p>Explore the amazing world of animals</p>
+</header>
+<nav>
+  <a href="#about">About</a>
+  <a href="#animals">Animals</a>
+  <a href="#contact">Contact</a>
+  <a href="#feedback">Feedback</a>
+</nav>
+<section id="about">
+  <h2>About Our Zoo</h2>
+  <p>Happy Zoo is home to many wonderful animals from around the world. Our mission is to protect wildlife and educate visitors.</p>
+  <p>A zoo is a place where many kinds of animals, birds, and reptiles are kept in enclosures for people to see. Visiting a zoo is both fun and educational.</p>
+</section>
+<section id="animals">
+  <h2>Animal Categories</h2>
+  <div class="animals">
+    <a href="wild.html" class="card"><h3>Wild Animals</h3></a>
+    <a href="domestic.html" class="card"><h3>Domestic Animals</h3></a>
+    <a href="reptiles.html" class="card"><h3>Reptiles</h3></a>
+    <a href="birds.html" class="card"><h3>Birds</h3></a>
+  </div>
+</section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Happy Zoo</strong></p>
+  <p>📍 Location: Green Park Road, City</p>
+  <p>📞 Phone: +91 98765 43210</p>
+  <p>📧 Email: happyzoo@gmail.com</p>
+</section>
+<section id="feedback">
+  <h2>Feedback</h2>
+  <p>We value your feedback. Please share your experience.</p>
+  <form>
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Your Email" required><br><br>
+    <textarea placeholder="Your Feedback" rows="4" required></textarea><br><br>
+    <input type="submit" value="Submit Feedback">
+  </form>
+</section>
+<footer>
+  <p>© 2026 Happy Zoo. All rights reserved.</p>
+</footer>
+</body>
+</html>
